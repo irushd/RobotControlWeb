@@ -9,49 +9,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>GPS</display-name>
-    <servlet-name>GPS</servlet-name>
-    <servlet-class>GPS</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>GPS</servlet-name>
-    <url-pattern>/GPS</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Robot</display-name>
-    <servlet-name>Robot</servlet-name>
-    <servlet-class>Robot</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Robot</servlet-name>
-    <url-pattern>/Robot</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>Output</display-name>
-    <servlet-name>Output</servlet-name>
-    <servlet-class>Output</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Output</servlet-name>
-    <url-pattern>/Output</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>RobotControl</display-name>
-    <servlet-name>RobotControl</servlet-name>
-    <servlet-class>RobotControl</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RobotControl</servlet-name>
-    <url-pattern>/RobotControl</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description>This servlet acts as a webservice and controls the robot by providing the guidance</description>
-    <display-name>RobotController</display-name>
+ <servlet>
+  <display-name>RobotController</display-name>
     <servlet-name>RobotController</servlet-name>
     <servlet-class>webservice.RobotController</servlet-class>
   </servlet>

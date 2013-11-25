@@ -1,7 +1,7 @@
 package RobotMovement;
 
 public class RobotMovement {
-	public static String movement = "Stopped";
+	public static String movement = "Nothing";
 
 	/**
 	 * @return the movement
