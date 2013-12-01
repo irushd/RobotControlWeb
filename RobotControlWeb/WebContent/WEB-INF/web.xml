@@ -9,13 +9,23 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- <servlet>
-  <display-name>RobotController</display-name>
+  <servlet>
+    <display-name>RobotController</display-name>
     <servlet-name>RobotController</servlet-name>
     <servlet-class>webservice.RobotController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RobotController</servlet-name>
     <url-pattern>/RobotController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Controller</display-name>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>controller.Controller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>/Login</url-pattern>
   </servlet-mapping>
 </web-app>

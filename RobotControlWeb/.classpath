@@ -36,5 +36,6 @@
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 6.0/lib/tomcat-i18n-es.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 6.0/lib/tomcat-i18n-fr.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 6.0/lib/tomcat-i18n-ja.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mySQL Jconnector"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
