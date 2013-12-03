@@ -51,10 +51,15 @@ public class Controller extends HttpServlet {
 			User userObj  = AccessDb.getUser(user, pass);
 			session.setAttribute("userObj", userObj);
 			}
+			ServletContext context = getServletContext();
+			RequestDispatcher dispatch = context.getRequestDispatcher("/Control.jsp"); 
+			dispatch.forward(request, response);
 		}
-		ServletContext context = getServletContext();
-		RequestDispatcher dispatch = context.getRequestDispatcher("/Control.jsp"); 
-		dispatch.forward(request, response);
+		else{
+			ServletContext context = getServletContext();
+			RequestDispatcher dispatch = context.getRequestDispatcher("/signup.html"); 
+			dispatch.forward(request, response);		
+		}
 		
 	}
 

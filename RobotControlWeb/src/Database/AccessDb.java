@@ -12,12 +12,12 @@ public class AccessDb {
 	private static String createDb = "CREATE DATABASE IF NOT EXISTS `Robot`;";
 	private static String createSchema = "CREATE SCHEMA IF NOT EXISTS `Robot`;";
 	private static String useDb = "Use Robot";
-	private static String createUserTable = "CREATE TABLE IF NOT EXISTS `Users`("
+	private static String createUserTable = "CREATE TABLE IF NOT EXISTS `users`("
 			+ "`id` INT NOT NULL AUTO_INCREMENT ,"
 			+ "`user` VARCHAR(45) NULL ,"
 			+ "`pass` VARCHAR(45) NULL ,"
 			+ "`email` VARCHAR(45) NULL ," + "PRIMARY KEY (`id`) );;";
-	private static String createUserSettingsTable = "CREATE TABLE IF NOT EXISTS `Robot`.`Usersettings` ("
+	private static String createUserSettingsTable = "CREATE TABLE IF NOT EXISTS `Robot`.`usersettings` ("
 			+ "`id` INT NOT NULL AUTO_INCREMENT ,"
 			+ "`user` VARCHAR(45) NULL ,"
 			+ "`left` VARCHAR(45) NULL DEFAULT 'l' ,"
@@ -25,14 +25,14 @@ public class AccessDb {
 			+ "`forward` VARCHAR(45) NULL DEFAULT 'f' ,"
 			+ "`back` VARCHAR(45) NULL DEFAULT 'b' , PRIMARY KEY (`id`) );";
 
-	private static String createUser = "INSERT INTO `robot`.`users` (`user`, `pass`, `email`) VALUES (?, ?, ?);";
-	private static String getUser = "SELECT * FROM `robot`.`users` where user = ? and pass = ? ;";
-	private static String getUserSettings = "SELECT * FROM robot.usersettings where user = ?;";
+	private static String createUser = "INSERT INTO `users` (`user`, `pass`, `email`) VALUES (?, ?, ?);";
+	private static String getUser = "SELECT * FROM `users` where `user` = ? and `pass` = ? ;";
+	private static String getUserSettings = "SELECT * FROM usersettings where `user` = ?;";
 	private static String saveUserSettings = "INSERT INTO" +
-			" `robot`.`usersettings` (`user`, `left`, `right`," +
+			" `usersettings` (`user`, `left`, `right`," +
 			" `forward`, `back`) VALUES (?, ?, ?, ?, ?);";
 	private static String dbConnString = "jdbc:mysql://mysql-stryker.jelastic.servint.net";
-//	private static String dbConnString = "jdbc:mysql://localhost";
+	//private static String dbConnString = "jdbc:mysql://localhost";
 	private static Connection dbConn;
 	//private static String dbUser = "root";
 	private static String dbUser = "Stryker";
@@ -67,6 +67,7 @@ public class AccessDb {
 
 	public static synchronized boolean loginCheck(String user, String pass) {
 		try {
+			
 			PreparedStatement getUserSt = dbConn.prepareStatement(getUser);
 			getUserSt.setString(1, user);
 			getUserSt.setString(2, pass);
